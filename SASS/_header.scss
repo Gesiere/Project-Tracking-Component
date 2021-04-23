@@ -1,0 +1,64 @@
+.header {
+  position: relative;
+  padding: 2rem;
+  font-family: "Barlow Condensed", sans-serif;
+  @include xlarge {
+    padding: 4rem 0 2rem 0;
+  }
+  @include tablet {
+    padding: 3rem;
+  }
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav-links {
+    a {
+      font-weight: bold;
+      margin-left: 1rem;
+      color: $very-dark-blue;
+      transition: all 300ms ease-in-out;
+
+      &:last-child {
+        color: $dark-grayish-blue;
+        margin-left: 4rem;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .mobile-menu {
+    position: absolute;
+    top: 95px;
+    left: 22px;
+    right: 22px;
+    background: #fff;
+    box-shadow: 7px 6px 15px 5px rgba(black, 0.1);
+    .mobile-links {
+      padding: 1rem 2rem;
+      text-align: center;
+      hr {
+        color: $light-grayish-blue;
+      }
+      a {
+        display: block;
+        color: $very-dark-blue;
+        margin-top: 1.5rem;
+        transition: all 300ms ease-in-out;
+        font-weight: bold;
+        &:nth-child(3) {
+          margin-bottom: 1rem;
+        }
+        &:last-child {
+          color: $grayish-blue;
+        }
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
